@@ -1,17 +1,21 @@
-import React from "react";
-import "./App.css";
-import Layout from "./components/Layout";
-import { useTheme, ThemeProvider } from "@mui/material/styles";
+import React from 'react'
+import './App.css'
+import { Provider } from 'react-redux'
+import Layout from './components/Layout'
+import { useTheme, ThemeProvider } from '@mui/material/styles'
+import store from 'store'
 
 function App() {
-  const theme = useTheme();
+  const theme = useTheme()
   return (
     <div className="App">
-      <ThemeProvider theme={theme}>
-        <Layout />
-      </ThemeProvider>
+      <Provider store={store}>
+        <ThemeProvider theme={theme}>
+          <Layout />
+        </ThemeProvider>
+      </Provider>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

@@ -4,7 +4,9 @@
   display: block;
   min-height: 100vh;
 }
-
+iframe {
+  position: static !important;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
